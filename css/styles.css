@@ -1,0 +1,171 @@
+:root{
+    --fondo: hsl(217, 54%, 11%);
+    --tarjeta: hsl(216, 50%, 16%);
+    --linea: hsl(215, 32%, 27%);
+    --blanco: hsl(0, 0%, 100%);
+
+    --softBlue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+}
+
+html{
+    font-size: 16px;
+    line-height: 1.5rem;
+    color: var(--softBlue);
+    
+}
+
+*{
+    font-family:'Outfit', sans-serif;
+    box-sizing: border-box;  
+    margin: 0;
+    padding: 0;  
+}
+
+body{    
+    background-color: var(--fondo);
+       
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+a{
+    text-decoration: none;
+    color: var(--blanco);
+}
+
+article{
+    width: 300px;
+    background-color: var(--tarjeta);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+div.imagen{
+    width: 100%;
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.imagen img{   
+    width: 100%;
+    transition: all 400ms ease-in-out;   
+    
+}
+
+div.imagen:hover>img{
+    width: 110%;
+}
+
+.imagen .vista{    
+    /* visibility:hidden;     */
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 255, 246, .0);
+    position: absolute;
+    top:0px;
+    left: 0px;
+    border-radius: 15px; 
+    display: flex;   
+    justify-content: center;
+    align-items: center; 
+    transition: all 200ms;
+    
+    
+    
+}
+
+div.imagen:hover .vista{
+    /* visibility:visible; */
+    opacity: 1;
+    background-color: rgba(0, 255, 246, .5);
+    
+    
+    
+}
+
+a.vista img{
+    width: 40px;
+    height: auto;
+           
+}
+
+div.content{
+    margin-bottom: 1rem;
+    border-bottom: 2px var(--linea) solid;
+}
+
+h3{    
+    margin: 1rem 0;
+    font-weight: 600;
+    display: inline-block
+}
+
+h3:hover{
+    color: var(--cyan);
+}
+
+div.columnContent, div.ethereum, div.clock{
+    display: flex;        
+}
+
+div.columnContent{
+    margin: 1rem 0;
+    justify-content: space-between;
+}
+
+div.columnContent p{
+    font-size: 0.9rem;
+}
+
+
+div.ethereum, div.clock{
+    gap: 5px;
+    align-items: center;
+}
+
+div.ethereum{
+    color: var(--cyan);
+    font-weight: 500;
+}
+
+div.ethereum img{
+    width: 13px;
+}
+
+div.clock img{
+    width: 20px;
+    height: 20px;
+}
+
+div.author{
+    margin: 1rem 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+div.author img{
+    width: 35px;
+    border: 2px solid var(--blanco);
+    border-radius: 100%;
+}
+
+div.author a, div.author p{
+    font-size: 0.9rem;
+}
+
+div.author a:hover{
+    color: var(--cyan)
+}
